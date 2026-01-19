@@ -1,0 +1,25 @@
+thresholds:
+  pip_deviation_threshold: 12
+  latency_threshold_ms: 1000
+  slippage_threshold_pips: 10
+  pre_trade_lookback_seconds: 5
+
+risk_weights:
+  pre_trade: 3
+  benchmark: 2
+  latency: 1
+  execution_quality: 2
+
+paths:
+  rfq_input: /Volumes/workspace/default/frontrunningproject/input/rfq_fx_dataset.csv
+  trades_input: /Volumes/workspace/default/frontrunningproject/input/dealer_trades.csv
+  benchmark_input: /Volumes/workspace/default/frontrunningproject/input/market_benchmark.csv
+  output_path: /Volumes/workspace/default/frontrunningproject/output
+
+write:
+  csv: true
+  json: true
+  parquet: false
+
+runtime:
+  timezone: UTC
